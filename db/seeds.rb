@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'json'
+file = File.read('schedule.json')
+data = JSON.parse(file)
+
+puts "After seeding the database"
+puts " - There are #{Match.count} matches."
+puts " - There are #{Season.count} seasons."
+puts " - There are #{Team.count} teams."
