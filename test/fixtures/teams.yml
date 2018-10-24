@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  key: MyString
+  name: MyString
+  code: MyString
+  match: one
+  season: one
+
+two:
+  key: MyString
+  name: MyString
+  code: MyString
+  match: two
+  season: two
