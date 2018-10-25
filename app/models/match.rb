@@ -4,6 +4,4 @@ class Match < ApplicationRecord
 
   validates :name, presence: true
   validates :date, presence: true
-  validates :homeTeamScore, numericality: { only_integer: true }
-  validates :awayTeamScore, numericality: { only_integer: true }
 end
