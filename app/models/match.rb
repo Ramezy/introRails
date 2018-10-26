@@ -1,7 +1,9 @@
 class Match < ApplicationRecord
   belongs_to :season
-  has_many :teams
+  has_many :team, through: :season
 
-  validates :name, presence: true
-  validates :date, presence: true
+  validates :awayTeam, presence:true
+  validates :homeTeam, presence:true
+  validates :awayTeamScore, presence:true
+  validates :homeTeamScore, presence:true
 end

@@ -3,13 +3,17 @@
 one:
   name: MyString
   season: one
-  date: 2018-10-24 11:08:09
+  date: 2018-10-25 13:45:02
   homeTeamScore: 1
   awayTeamScore: 1
+  homeTeam: MyString
+  awayTeam: MyString
 
 two:
   name: MyString
   season: two
-  date: 2018-10-24 11:08:09
+  date: 2018-10-25 13:45:02
   homeTeamScore: 1
   awayTeamScore: 1
+  homeTeam: MyString
+  awayTeam: MyString

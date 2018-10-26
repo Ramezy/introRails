@@ -6,6 +6,8 @@ class CreateMatches < ActiveRecord::Migration[5.2]
       t.datetime :date
       t.integer :homeTeamScore
       t.integer :awayTeamScore
+      t.string :homeTeam
+      t.string :awayTeam
 
       t.timestamps
     end
