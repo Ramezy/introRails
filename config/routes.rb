@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'teams/index'
-  get 'teams/show'
-  get 'matches/index'
-  get 'matches/show'
+  get 'home/index'
+  resources :teams , only:[:index, :show]
+  resources :matches, only:[:index, :show]
   resources :about , only:[:index]
-  resources :seasons , only:[:index, :show]
+  resources :season , only:[:index, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
