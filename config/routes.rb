@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'search/index'
+  get 'search/results'
   get 'home/index'
   resources :teams , only:[:index, :show]
   resources :matches, only:[:index, :show]
