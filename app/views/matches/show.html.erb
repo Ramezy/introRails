@@ -1,10 +1,3 @@
-<ul>
-    <li><a href="http://localhost:3000/home">Home</a></li>
-    <li><a href="http://localhost:3000/season">EPL 2016/17</a></li>
-    <li><a href="http://localhost:3000/matches">MatchDays</a></li>
-    <li><a href="http://localhost:3000/teams">Team</a></li>
-    <li><a href="http://localhost:3000/search">Search</a></li>
-</ul>
 
 <% match = @match%>
 <div>
@@ -16,4 +9,5 @@
     <p><b>Match  HomeTeamScore: </b><%=match.homeTeamScore%>
     <p><b>Match  AwayTeams: </b><%=match.awayTeam%></p>
     <p><b>Match  AwayTeamScore: </b><%=match.awayTeamScore%>
+    <p><b>Match  Season: </b><%=match.season.name%>
     </div>
