@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>IntroRails</title>
+    <title>Season 16/17 Match Days</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +10,32 @@
   </head>
 
   <body>
-    
+    <header id="app">
+      <h1>Match Day</h1>
+    </header>
+    <nav id = "nav">
+      <ul id="list">
+        <li><a href="http://localhost:3000/home">Home</a></li>
+        <li><a href="http://localhost:3000/season">EPL 2016/17</a></li>
+        <li><a href="http://localhost:3000/matches">MatchDays</a></li>
+        <li><a href="http://localhost:3000/teams">Team</a></li>
+        <li><a href="http://localhost:3000/search">Search</a></li>
+      </ul>
+    </nav>
+
+    <div id = "search">
+      <%= form_tag(results_search_index_path, method: "get") do %>
+        <%= label_tag(:q, "Search for:") %> 
+        <%= text_field_tag(:q) %>
+        <%= submit_tag("Search") %>
+      <% end %>
+    </div>
+
     <%= yield %>
+    <footer class="">
+        <div class="container">
+          <p class="">Copyright &copy; Match Days 16/17</p>
+        </div>
+    </footer>
   </body>
 </html>

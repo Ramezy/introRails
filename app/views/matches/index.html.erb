@@ -3,18 +3,18 @@
     <li><a href="http://localhost:3000/season">EPL 2016/17</a></li>
     <li><a href="http://localhost:3000/matches">MatchDays</a></li>
     <li><a href="http://localhost:3000/teams">Team</a></li>
+    <li><a href="http://localhost:3000/search">Search</a></li>
 </ul>
 
 <div>
 <h1>Match Days</h1>
-<%= paginate @matches%>
+<%= paginate @matches %>
 </div>
 
-<% match_info = @match%>
-<% if match_info.match.count == 1%>
-    <h1><%= match_info.name%></h1>
+<% if @matches.count == 1 %>
+    <h1><%= @matches.name%></h1>
 <% else %>
-    <h1><%= match_info.name%></h1>
+    <h1><%= @matches.name%></h1>
 <% end %>
 
 <table>
@@ -26,7 +26,7 @@
     <th>Match Info</th>
 </tr>
 
-<% match_info.matches.each do |match| %>
+<% @matches.each do |match| %>
     <tr>
         <td><p><%= match.date%></p></td>
         <td><p><%= match.name%></p></td>

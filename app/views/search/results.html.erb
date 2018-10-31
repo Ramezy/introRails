@@ -1,2 +1,41 @@
-<h1>Search#results</h1>
-<p>Find me in app/views/search/results.html.erb</p>
+<ul>
+    <li><a href="http://localhost:3000/home">Home</a></li>
+    <li><a href="http://localhost:3000/season">EPL 2016/17</a></li>
+    <li><a href="http://localhost:3000/matches">MatchDays</a></li>
+    <li><a href="http://localhost:3000/teams">Team</a></li>
+</ul>
+
+<div>
+    <% if @matches.empty? %>
+        <h1> No Matches Found.</h1>
+    <% elsif @matches.size == 1 %>
+        <h1><%= @matches.size %> Matches Found. </h1>
+    <% else %>
+        <h1><%=  @matches.size %> Matches Found. </h1>
+    <% end %>
+
+    <% if @matches.empty? %>
+        <p>No Matches were played.</p>
+    <% else %>
+
+    <%= paginate @matches%>
+</div>
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Name</th>
+    </tr>
+
+    <% @matches.each do |match|  %>
+        <tr>
+            <td>
+                <p><%= match.date %></p>
+            </td>
+            <td>
+                <p><%= link_to match.name , match %>
+            </td>
+        </tr>
+    <% end %>
+</table>
+<% end %>

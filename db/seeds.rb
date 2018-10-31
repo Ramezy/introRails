@@ -18,7 +18,7 @@ data["rounds"].each do |round|
         team.key = mat["team1"]["key"]
         team.code = mat["team1"]["code"]
         team.season = season
-        team.match = match.
+        team.match = match
         team.save
     end
 end  
